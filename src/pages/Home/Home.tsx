@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './react.svg'
-import './Home.css'
+import reactLogo from '/public/images/react.svg'
 import { Flex, Text, Image, Button } from '@chakra-ui/react'
 
 const Home: React.FC = () => {
@@ -11,18 +10,17 @@ const Home: React.FC = () => {
 			height="100vh"
 			flexDir="column"
 			alignItems="center"
-			paddingTop="40px"
+			justifyContent="center"
+			gap="20px"
 		>
 			<Flex flexDir="row">
-				<Image
-					src={reactLogo}
-					boxSize="160px"
-					className="logo"
-					id="react-logo"
-				/>
+				<Image src={reactLogo} boxSize="160px" />
 			</Flex>
-			<Text fontSize="xl" margin="10px 0 20px 0">
+			<Text fontWeight="bold" fontSize="xl">
 				Test vite hot reloading feature: {count}
+			</Text>
+			<Text fontWeight="light">
+				State is saved even on new page render
 			</Text>
 			<Button onClick={() => setCount((count) => count + 1)}>
 				Click Me
